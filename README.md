@@ -1,2 +1,15 @@
 # vimmy
-A minimal C++ windowed game for learning Vim motions through interactive levels, built with GLFW and OpenGL, with Docker support for reproducible builds.
+
+To install dependencies:
+
+```bash
+bun install
+```
+
+To run:
+
+```bash
+bun run index.ts
+```
+
+This project was created using `bun init` in bun v1.3.13. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
