@@ -1,0 +1,3 @@
+[submodule "game/external/glad"]
+	path = game/external/glad
+	url = https://github.com/Dav1dde/glad.git
