@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Character Viewer</title>
+		<style>
+			:root {
+				color-scheme: dark;
+				font-family: 'Segoe UI', sans-serif;
+				background: #090b10;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				min-height: 100vh;
+				overflow: hidden;
+				color: #f4f4f2;
+				display: flex;
+			}
+
+			#browser {
+				width: 220px;
+				min-width: 220px;
+				height: 100vh;
+				overflow-y: auto;
+				background: rgba(16, 18, 26, 0.95);
+				border-right: 1px solid rgba(255, 255, 255, 0.08);
+				padding: 12px 0;
+				z-index: 2;
+			}
+
+			#browser::-webkit-scrollbar {
+				width: 4px;
+			}
+			#browser::-webkit-scrollbar-track {
+				background: transparent;
+			}
+			#browser::-webkit-scrollbar-thumb {
+				background: rgba(255, 255, 255, 0.15);
+				border-radius: 2px;
+			}
+
+			.category {
+				margin-bottom: 4px;
+			}
+
+			.category-header {
+				padding: 8px 16px 4px;
+				font-size: 11px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #888;
+			}
+
+			.model-btn {
+				display: block;
+				width: 100%;
+				padding: 8px 16px;
+				border: none;
+				background: transparent;
+				color: #bbb;
+				font-size: 13px;
+				text-align: left;
+				cursor: pointer;
+				transition: background 0.15s, color 0.15s;
+			}
+
+			.model-btn:hover {
+				background: rgba(255, 255, 255, 0.06);
+				color: #fff;
+			}
+
+			.model-btn.active {
+				background: rgba(170, 51, 42, 0.2);
+				color: #ff6b5a;
+				border-right: 2px solid #aa332a;
+			}
+
+			#app {
+				flex: 1;
+				height: 100vh;
+				position: relative;
+			}
+
+			#error {
+				position: absolute;
+				inset: auto 16px 16px 16px;
+				padding: 12px 14px;
+				border-radius: 12px;
+				background: rgba(118, 23, 23, 0.9);
+				color: #fff4f4;
+				font-size: 13px;
+				display: none;
+				z-index: 1;
+			}
+
+			#controls-hint {
+				position: absolute;
+				bottom: 16px;
+				right: 16px;
+				padding: 8px 12px;
+				border-radius: 8px;
+				background: rgba(10, 12, 18, 0.6);
+				backdrop-filter: blur(8px);
+				font-size: 11px;
+				color: #888;
+				z-index: 1;
+				pointer-events: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="browser"></div>
+		<div id="app">
+			<div id="controls-hint">Orbit: drag &bull; Pan: right-drag &bull; Zoom: scroll</div>
+			<div id="error"></div>
+		</div>
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.179.1/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.179.1/examples/jsm/"
+				}
+			}
+		</script>
+		<script type="module" src="./viewer.js"></script>
+	</body>
+</html>

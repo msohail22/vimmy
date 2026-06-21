@@ -63,6 +63,9 @@ importers:
       tailwindcss:
         specifier: ^4.3.1
         version: 4.3.1
+      three:
+        specifier: ^0.184.0
+        version: 0.184.0
     devDependencies:
       '@cloudflare/vite-plugin':
         specifier: ^1.37.0
@@ -2701,6 +2704,9 @@ packages:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
 
+  three@0.184.0:
+    resolution: {integrity: sha512-wtTRjG92pM5eUg/KuUnHsqSAlPM296brTOcLgMRqEeylYTh/CdtvKUvCyyCQTzFuStieWxvZb8mVTMvdPyUpxg==}
+
   tiny-async-pool@2.1.0:
     resolution: {integrity: sha512-ltAHPh/9k0STRQqaoUX52NH4ZQYAJz24ZAEwf1Zm+HYg3l9OXTWeqWKyYsHu40wF/F0rxd2N2bk5sLvX2qlSvg==}
 
@@ -5119,6 +5125,8 @@ snapshots:
   tailwindcss@4.3.1: {}
 
   tapable@2.3.3: {}
+
+  three@0.184.0: {}
 
   tiny-async-pool@2.1.0: {}
 

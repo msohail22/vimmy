@@ -9,9 +9,8 @@ app.get("/server-health", (c) => {
         {
             status: "ok",
             timestamp: new Date().toISOString(),
-            version: "1.0.0",
-            uptime: process.uptime(),
-            environment: process.env.NODE_ENV
+            version: "1.0.0"
+            
         }
     )
 })
